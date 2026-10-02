@@ -2,7 +2,7 @@
 
 ## decisions or assumptions
 
-    - validation rules 
+    - validation rules -> I added field-specific messages for clearer messages for invalid formats and required fields.  I added friendly attribute names so default validation messages will use nicer customer facing labels.
     - The token lives in .env and is read through config/services.php to keep raw credentials protected.
 
 ## your webhook.site URL
