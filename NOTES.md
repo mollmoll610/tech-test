@@ -12,8 +12,11 @@ Ensure you have your values set up in the .env file under:
 - the API call is within a single request in the controller. It uses ::withToken(), a 10s time out and ->throw() to ensure any error responses are handled with an easy to read message and keep ahold of the input.
 - once request success, the user is reidrected to the thank you page, also preventing any resubmission on refresh, and the data is flashed to the session so any refreshing afterwards just redirects back to the fresh form.
 - any errors or failures get logged without holding any personal data, or the token.
+- I added in aria-describedby labels to help aid in accessibility especially for screen readers and users with potential vision issues.
+- I disabled the potetntial double click issue by adding a small condition check on the button to ensure the onsumbit event only can be fired off once until the validation has passed. It's not a total cohesive fix, with it still only being a client-side check on the window, but it works for now while the form is simple enough.
 
 ## your webhook.site URL
 https://webhook.site/04c21e1f-02c0-4e8d-9af0-a527a5482080
 
 ## anything I didn't get to, or would do differently with more time
+- of course a more fleshed out UI. Either creating reusable unput components to keep visuals/forms mirrored if they were to be reusable. But also moving to other libraries and packages that supply fleshed out form components that are proven accessible on a broad range of devices.

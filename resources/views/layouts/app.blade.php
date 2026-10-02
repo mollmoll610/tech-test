@@ -12,3 +12,9 @@
     </main>
 </body>
 </html>
+
+<script>
+    window.addEventListener('pageshow', () => {
+        document.querySelector('button[type=submit]').disabled = false;
+    });
+</script>
