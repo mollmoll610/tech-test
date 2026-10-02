@@ -28,7 +28,7 @@ class StoreCustomerRequest extends FormRequest
             'email' => ['required', 'string', 'email', 'max:255'],
             'phone' => ['required', 'string', 'max:25', 'regex:/^\+?(?=(?:\D*\d){7,15}\D*$)[0-9\s().-]+$/'],
             'date_of_birth' => ['required', 'date', 'before:today'],
-            'marketing_consent' => ['nullable', 'in:yes,no'],
+            'marketing_consent' => ['nullable', 'boolean'],
         ];
     }
 
