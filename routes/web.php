@@ -1,17 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', [UserController::class, 'create'])->name('home');
 
-Route::post('/submit', function () {
+Route::post('/submit', [UserController::class, 'store'])->name('submit');
 
-})->name('submit');
-
-
-Route::get('/thanks', function () {
-    return view('thanks');
-})->name('success');
+Route::get('/thanks', [UserController::class, 'thanks'])->name('success');
